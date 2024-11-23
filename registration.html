@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Registration Form</title>
+  <link rel="stylesheet" href="regisstyles.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>Registration Form</h1>
+    <form id="registrationForm">
+      <label>
+        <input type="radio" name="contactMethod" value="email" onclick="showFields('email')">
+        Email
+      </label>
+      <label>
+        <input type="radio" name="contactMethod" value="phone" onclick="showFields('phone')">
+        Phone
+      </label>
+      <label>
+        <input type="radio" name="contactMethod" value="mail" onclick="showFields('mail')">
+        Mail
+      </label>
+
+      <div id="emailField" class="hidden">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email">
+      </div>
+
+      <div id="phoneField" class="hidden">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}">
+      </div>
+
+      <div id="mailField" class="hidden">
+        <label for="street">Street Address:</label>
+        <input type="text" id="street" name="street">
+        
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city">
+        
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state">
+        
+        <label for="zip">ZIP Code:</label>
+        <input type="text" id="zip" name="zip" pattern="[0-9]{5}">
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="regscripts.js"></script>
+</body>
+</html>

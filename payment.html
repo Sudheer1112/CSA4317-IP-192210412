@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Method Form</title>
+    <link rel="stylesheet" href="payment.css">
+    <script>
+        function togglePaymentFields() {
+            // Hide all dynamic sections
+            document.getElementById("creditCardFields").style.display = "none";
+            document.getElementById("upi").style.display = "none";
+            document.getElementById("bitcoinFields").style.display = "none";
+
+            // Show relevant section based on the selected payment method
+            const selectedMethod = document.querySelector('input[name="payment"]:checked').value;
+            if (selectedMethod === "CreditCard") {
+                document.getElementById("creditCardFields").style.display = "block";
+            } else if (selectedMethod === "upi") {
+                document.getElementById("upi").style.display = "block";
+            } else if (selectedMethod === "Bitcoin") {
+                document.getElementById("bitcoinFields").style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Payment Method Form</h1>
+    <form action="#" method="post">
+        <label>Preferred Payment Method:</label><br>
+        <input type="radio" id="creditCard" name="payment" value="CreditCard" onclick="togglePaymentFields()" required>
+        <label for="creditCard">Credit Card</label><br>
+        <input type="radio" id="upi" name="payment" value="upi" onclick="togglePaymentFields()">
+        <label for="upi">upi</label><br>
+        <input type="radio" id="bitcoin" name="payment" value="Bitcoin" onclick="togglePaymentFields()">
+        <label for="bitcoin">Bitcoin</label>
+        <br><br>
+
+        <!-- Dynamic Input Fields -->
+        <div id="creditCardFields" style="display: none;">
+            <label for="cardNumber">Credit Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" pattern="\d{16}" placeholder="16-digit number" required>
+            <br>
+            <label for="expiryDate">Expiration Date:</label>
+            <input type="month" id="expiryDate" name="expiryDate" required>
+            <br>
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" pattern="\d{3}" placeholder="3-digit code" required>
+        </div>
+
+        <div id="paypalFields" style="display: none;">
+            <label for="upi">UPI ID:</label>
+            <input type="text" id="UPI ID" name="UPI ID" placeholder="1234567231@ybl" required>
+        </div>
+
+        <div id="bitcoinFields" style="display: none;">
+            <label for="bitcoinAddress">Bitcoin Address:</label>
+            <textarea id="bitcoinAddress" name="bitcoinAddress" rows="4" cols="50" placeholder="Enter your Bitcoin address" required></textarea>
+        </div>
+        <br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Process Payment">
+    </form>
+</body>
+</html>

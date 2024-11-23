@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Specification Form</title>
+</head>
+<body>
+    <h1>Laptop Specification Form</h1>
+    <form action="#" method="post">
+        <!-- Name Field -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        
+        <!-- Password Field -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        
+        <!-- Checkbox for OS -->
+        <label>OS Specification:</label><br>
+        <input type="checkbox" id="macOS" name="os[]" value="macOS">
+        <label for="macOS">macOS</label><br>
+        <input type="checkbox" id="windows" name="os[]" value="WINDOWS">
+        <label for="windows">WINDOWS</label><br>
+        <input type="checkbox" id="ubuntu" name="os[]" value="Ubuntu">
+        <label for="ubuntu">Ubuntu</label>
+        <br><br>
+        
+        <!-- Radio Buttons for Brand -->
+        <label>Brand Specification:</label><br>
+        <input type="radio" id="hp" name="brand" value="HP" required>
+        <label for="hp">HP</label><br>
+        <input type="radio" id="lenovo" name="brand" value="Lenovo" required>
+        <label for="lenovo">Lenovo</label><br>
+        <input type="radio" id="dell" name="brand" value="Dell" required>
+        <label for="dell">Dell</label><br>
+        <input type="radio" id="apple" name="brand" value="Apple" required>
+        <label for="apple">Apple</label>
+        <br><br>
+        
+        <!-- Text Area for Address -->
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="4" cols="50" required></textarea>
+        <br><br>
+        
+        <!-- Submit and Reset Buttons -->
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>

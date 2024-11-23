@@ -1,0 +1,36 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="music_catalog.xsl"?>
+<songs>
+    <song>
+        <title>Bohemian Rhapsody</title>
+        <artist>Queen</artist>
+        <album>A Night at the Opera</album>
+        <duration>5:55</duration>
+    </song>
+    <song>
+        <title>Imagine</title>
+        <artist>John Lennon</artist>
+        <album>Imagine</album>
+        <duration>3:03</duration>
+    </song>
+    <song>
+        <title>Hotel California</title>
+        <artist>The Eagles</artist>
+        <album>Hotel California</album>
+        <duration>6:30</duration>
+    </song>
+    <song>
+        <title>Billie Jean</title>
+        <artist>Michael Jackson</artist>
+        <album>Thriller</album>
+        <duration>4:54</duration>
+    </song>
+    <song>
+        <title>Shape of You</title>
+        <artist>Ed Sheeran</artist>
+        <album>Divide</album>
+        <duration>4:24</duration>
+    </song>
+</songs>
+n
